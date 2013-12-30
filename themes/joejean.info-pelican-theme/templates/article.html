@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title|striptags }}{% endblock %}
+{% block content %}
+ <div class="row">
+		
+		
+        <div class="col-lg-8">
+        
+          <!-- the actual blog post: title/author/date/content -->
+          <h1>{{ article.title }}</h1>
+          <p><span class="glyphicon glyphicon-user"></span> by {{article.author}} | <span class="glyphicon glyphicon-time"></span> on {{ article.locale_date }} |
+			<span class="glyphicon glyphicon-tag"></span> under: <span class="badge">{{article.category}}</span> </p>
+          <hr>
+          
+          <img src="http://placehold.it/900x300" class="img-responsive">
+          <hr>
+          {{article.content}}
+          
+          
+          <!-- the comment box -->
+          <div class="well">
+            
+			
+			{% if DISQUS_SITENAME and SITEURL and article.status != "draft" %}
+				<div class="comments">
+				  <h2>Please Leave a Comment!</h2>
+				  <div id="disqus_thread"></div>
+				  <script type="text/javascript">
+					var disqus_identifier = "{{ article.url }}";
+					var disqus_url = "{{ SITEURL }}/{{ article.url }}";
+					(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+					})();
+				  </script>
+				</div>
+			{% endif %}
+            
+          </div>
+          
+          
+
+        </div>
+		
+		<!-- Social -->
+		<div class="col-lg-1">
+		</div>
+		
+        <div class="col-lg-3">
+          <div class="well">
+		   <h3> <span class="glyphicon glyphicon-info-sign"> </span>  About Me</h3>
+			 
+				<img src="https://dl.dropboxusercontent.com/u/73165478/Joe_Jean_ID.jpg" alt="Joe Jean Picture" class="img-circle img-responsive">
+
+				<p> My name is Joe Jean. I'm a sophomore studying Computer Science at New York University Abu Dhabi <a href="http://nyuad.nyu.edu" target="_blank">(NYUAD)</a>. 
+				I'm a passionate of computers. This site will contain interesting information particularly about Information Technology.
+                <a href="{{ SITEURL }}/pages/about-me">Learn more about me</a> </p>
+                
+            <h3> <span class="glyphicon glyphicon-envelope"> </span> Get In Touch</h3>
+				<ul class="list-unstyled">
+                    <li> <i class="fa fa-facebook-square"></i> <a href="https://www.facebook.com/joe.jean3">Facebook</a></li>
+                    <li> <i class="fa fa-linkedin-square"></i> <a href="http://ae.linkedin.com/in/joejean/">LinkedIn</a></li>
+					<li> <i class="fa fa-google-plus"></i> <a href="http://google.com/+JoeJean">Google+</a></li>
+					<li> <i class="fa fa-github"></i> <a href="https://github.com/joejean">GitHub</a></li>
+                    <li> <i class="fa fa-envelope"></i> <a href="mailto:joe@joejean.info">Email</a></li>
+                </ul>
+            
+            <hr class="btn-custom">
+         
+			<h3> <i class="fa fa-tags"></i> Tags</h3>
+				<ul class="list-unstyled">
+					
+					{% for tag in tag_cloud %}
+						<li class="tag-{{ tag.1 }}"><a href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0 }}</a></li>
+					{% endfor %}
+				</ul>
+                    
+               
+			<hr class="btn-custom">
+			
+            <h3><i class="fa fa-archive"></i>  Archives</h3>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul class="list-unstyled">
+                    <li><a href="{{ SITEURL }}/archives.html/">2013</a></li>
+                    
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#alien-abductions"></a></li>
+                    
+                  </ul>
+                </div>
+              </div>
+			  
+          
+            
+          </div><!-- /well -->
+        </div>
+      </div>
+      
+      <hr class="btn-custom">
+      
+
+{% endblock %}

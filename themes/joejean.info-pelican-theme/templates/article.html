@@ -4,7 +4,7 @@
  <div class="row">
 		
 		
-        <div class="col-lg-8">
+        <div class="col-md-8">
         
           <!-- the actual blog post: title/author/date/content -->
           <h1>{{ article.title }}</h1>
@@ -12,8 +12,6 @@
 			<span class="glyphicon glyphicon-tag"></span> under: <span class="badge">{{article.category}}</span> </p>
           <hr>
           
-          <img src="http://placehold.it/900x300" class="img-responsive">
-          <hr>
           {{article.content}}
           
           
@@ -23,7 +21,7 @@
 			
 			{% if DISQUS_SITENAME and SITEURL and article.status != "draft" %}
 				<div class="comments">
-				  <h2>Please Leave a Comment!</h2>
+
 				  <div id="disqus_thread"></div>
 				  <script type="text/javascript">
 					var disqus_identifier = "{{ article.url }}";
@@ -44,10 +42,10 @@
         </div>
 		
 		<!-- Social -->
-		<div class="col-lg-1">
+		<div class="col-md-1">
 		</div>
 		
-        <div class="col-lg-3">
+        <div class="col-md-3">
           <div class="well">
 		   <h3> <span class="glyphicon glyphicon-info-sign"> </span>  About Me</h3>
 			 
@@ -81,13 +79,13 @@
 			
             <h3><i class="fa fa-archive"></i>  Archives</h3>
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-md-6">
                   <ul class="list-unstyled">
                     <li><a href="{{ SITEURL }}/archives.html/">2013</a></li>
                     
                   </ul>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-6">
                   <ul class="list-unstyled">
                     <li><a href="#alien-abductions"></a></li>
                     

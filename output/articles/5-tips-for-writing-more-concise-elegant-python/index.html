@@ -8,7 +8,7 @@
 		<meta name="robots" content="all">
 		<meta name="keywords" content="coding, python, computer science student, web development, computer programming tips">
 
-        <title>Programming | JoeJean.info </title>
+        <title>5 Tips for writing more concise and elegant code in Python</title>
         <link rel="stylesheet" href="http://localhost:8000/theme/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="http://localhost:8000/theme/css/joeblog-bootstrap.css" />
 		<link rel="stylesheet" href="http://localhost:8000/theme/css/font-awesome.min.css" />
@@ -52,50 +52,159 @@
     </nav>
 	
     <div class="container">
-    <div class="row">
-	
-	
+ <div class="row">
 		
 		
-		<div class="col-md-8">
-	
-			<div class="panel panel-primary">
-			<div class="panel-heading"> <i class="fa fa-tag"></i> <strong>Tags:</strong><a class="whitelink" href="http://localhost:8000/tag/python/">python</a> <a class="whitelink" href="http://localhost:8000/tag/programming/">programming</a> 			<span class="pull-right"> <i class="fa fa-folder"></i> <strong>Category:</strong> <a class="whitelink" href="http://localhost:8000/category/programming/">Programming</a></span></div>
-			<div class="panel-body">
-			<h2><a href="http://localhost:8000/articles/5-tips-for-writing-more-concise-elegant-python/">5 Tips for writing more concise and elegant code in Python</a></h2>
-			<p><p>Last week, I was reviewing some of the first lines of code I wrote when I was learning python three years ago. While they worked, I have now realised that
+        <div class="col-md-8">
+        
+          <!-- the actual blog post: title/author/date/content -->
+          <h1>5 Tips for writing more concise and elegant code in Python</h1>
+          <p><span class="glyphicon glyphicon-user"></span> by Joe Jean | <span class="glyphicon glyphicon-time"></span> on Tue 11 February 2014 |
+			<span class="glyphicon glyphicon-tag"></span> under: <span class="badge">Programming</span> </p>
+          <hr>
+          
+          <p>Last week, I was reviewing some of the first lines of code I wrote when I was learning python three years ago. While they worked, I have now realised that
 there are many things I could have done in a more elegant and concise way. Of course, when learning a new programming language one is always 
 encouraged to build things from scratch, to write one's own functions, classes or methods to do things even when such code might already exist. 
-...<a href="http://localhost:8000/articles/5-tips-for-writing-more-concise-elegant-python/"> Read More</a><p>
-			</div>
-			<div class="panel-footer"> <i class="fa fa-user"></i> by Joe Jean <span class="pull-right"> <i class="fa fa-calendar"></i> Tue 11 February 2014</span> </div>
-			</div>
-		
-<ul class="pager">
-    <span class="label label-primary">Page 1 / 1</span>
-</ul>
-		</div>
-		
-	
-		
+</p>
+<p>This approach is definitely useful for a beginner. However, once one understands the basics,it is a good idea to start using code and techniques already 
+provided -at least by the programming language itself. This will not only help you build things faster but also -in most cases- make your code more concise and readable. 
+The following are five tips that you can start using today to make your python code more concise and elegant. </p>
+<h3>1) Prefer the return statement to evaluate your expression and return its result for you</h3>
+<p>Sometimes you have a function that returns the result of an expression. Let's say it's a boolean expression, so the return value can be either 
+true or false. One usually uses a  variable to store the result of the expression and then return that variable, such as this:
+<pre><code>
+def isEven(a):
+    if (a % 2)==0:
+        result = True
+    else:
+        result = False
+    return result
+</code></pre>
+However, a more elegant way to reach the same result is to provide the entire expression to the return statement and it will compute and return the result of the
+expression as follow:
+<pre><code>
+def isEven(a):
+    return (a % 2)==0
+</code></pre>
+This is possible because the return statement actually returns the result of evaluating an expression. And in case you are wondering, numbers eveluate to themselves.</p>
+<h3>2) Prefer Python's builtin <code>format()</code>function to format your strings</h3>
+<p>Imagine you have an object called "Player" which has attributes such has name and age. Now imagine that you have
+a function calles printPlayerInfo() that prints the player's information. One would usually uses the plus sign (+) to concatenate one's string literals with
+one's string variables, such as this:
+<pre><code>
+def printPlayerInfo(Player):
+    return "The player's name is "+Player.name+" and the player is "+str(Player.age)+" years old"
+</code></pre> <br />
+However, a more elegant way to do this is to use python's builtin format() function, thus our function becomes:</p>
+<pre><code>
+def printPlayerInfo(Player):
+    return "The player Name is {Player.name} and the player is {Player.age} years old".format(Player=Player)
+</code></pre>
+
+<p>As you can see, in addittion to making your code more readable, the format function spare the programmer the extra burden of casting all numbers to strings.    </p>
+<h3>3) Prefer a tuple instead of a temporary variable when swaping the values of two variables</h3>
+<p>When one wants to swap the values of two variables, they usually use a third variable as a temporary storage for one of the two values. Let's imagine,we have 
+we want to swap the values of the variables <code>currentScore</code> and <code>prevScore</code>, one usually proceed as follow:</p>
+<pre><code>
+currentScore = 34
+prevScore = 23
+temp = currentScore
+currentScore = prevScore
+prevScore = temp
+</code></pre>
+
+<p>However, this can be done more elegantly using a python tuple:</p>
+<pre><code>
+currentScore = 34
+prevScore = 23
+(currentScore, prevScore) = (prevScore, currentScore)
+</code></pre>
+
+<h3>4) Prefer list comprehension to create a new list out of an existing one</h3>
+<p>Imagine that you have a list of numbers,<code>firstList</code> and you want to create a second list,<code>secondList</code>  with all the even numbers - we assume there are some- contained 
+in <code>firstList</code>. Usually one would proceed as follow:</p>
+<pre><code>
+firstList = [2283, 4, 567, 236, 4458]
+secondList = []
+
+for val in firstList:
+    if val % 2 == 0:
+        secondList.append(val)
+
+</code></pre>
+
+<p>However, a more elegant and pythonic way to do the same thing is to use list comprehension notation as follows:</p>
+<pre><code>
+firstList = [2283, 4, 567, 236, 4458]
+secondList = [ val for val in list1 if val%2 == 0]
+</code></pre>
+
+<p>Well, some people might argue that the first method is more comprehensible than the second one. I would say that such a view is influenced by their knowledge of 
+other programming languages. Furthermore, list comprehension is a python specific feature which is created to make code more beautiful and concise. </p>
+<h3>5) Prefer the list's <code>count()</code> method to count the number of times an item appears on the list:</h3>
+<p>Imagine that you have a list that has a couple of names for example. And, let's say you want to count the number of times a certain name appears on the list.
+Usually one would proceed as follow:</p>
+<pre><code>
+nameList = ["aaa", "bbb", "aaa", "ccc", "ddd"]
+count =0
+for name in nameList:
+    if name == "aaa":
+        count += 1
+
+</code></pre>
+
+<p>However, to achieve the same result you can simply use python's builtin list <code>count()</code> method as follow:</p>
+<pre><code> 
+nameList = ["aaa", "bbb", "aaa", "ccc", "ddd"]
+count = nameList.count("aaa")
+</code></pre>
+
+<p>The python list data type hase more of those useful builtin methods that can not only make more life easier but aslo make your code more readable and concise. 
+You can find them in the <a href = "http://docs.python.org/2/tutorial/datastructures.html#more-on-lists" target="_blank"> python documentation.</a>
+<br />
+<br />
+<br /></p>
+          
+          
+          <!-- the comment box -->
+          <div class="well">
+            
+			
+				<div class="comments">
+
+				  <div id="disqus_thread"></div>
+				  <script type="text/javascript">
+					var disqus_identifier = "articles/5-tips-for-writing-more-concise-elegant-python/";
+					var disqus_url = "http://localhost:8000/articles/5-tips-for-writing-more-concise-elegant-python/";
+					(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = 'http://joejeanblog.disqus.com/embed.js';
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+					})();
+				  </script>
+				</div>
+            
+          </div>
+          
+          
+
+        </div>
 		
 		<!-- Social -->
 		<div class="col-md-1">
-		
 		</div>
 		
         <div class="col-md-3">
           <div class="well">
-			 <h3> <span class="glyphicon glyphicon-info-sign"> </span>  About Me</h3>
+		   <h3> <span class="glyphicon glyphicon-info-sign"> </span>  About Me</h3>
 			 
 				<img src="https://dl.dropboxusercontent.com/u/73165478/Joe_Jean_ID.jpg" alt="Joe Jean Picture" class="img-circle img-responsive">
 
 				<p> My name is Joe Jean. I'm a passionate web developer. This site will contain useful information on topics related to technology in general and computer programming in particular.
                 <a href="http://localhost:8000/pages/about-me">Learn more about me</a> </p>
                 
-			
-			<hr class="btn-custom">
-			
+                
             <h3> <span class="glyphicon glyphicon-envelope"> </span> Get In Touch</h3>
 				<ul class="list-unstyled">
                     <li> <i class="fa fa-facebook-square"></i> <a href="https://www.facebook.com/joe.jean3">Facebook</a></li>
@@ -107,6 +216,16 @@ encouraged to build things from scratch, to write one's own functions, classes o
             
             <hr class="btn-custom">
          
+			<h3> <i class="fa fa-tags"></i> Tags</h3>
+				<ul class="list-unstyled">
+					
+						<li class="tag-4"><a href="http://localhost:8000/tag/programming/">programming</a></li>
+						<li class="tag-4"><a href="http://localhost:8000/tag/python/">python</a></li>
+				</ul>
+                    
+               
+			<hr class="btn-custom">
+			
             <h3><i class="fa fa-archive"></i>  Archives</h3>
               <div class="row">
                 <div class="col-md-6">
@@ -123,12 +242,11 @@ encouraged to build things from scratch, to write one's own functions, classes o
                 </div>
               </div>
 			  
-			
           
+            
           </div><!-- /well -->
         </div>
-    </div>
-      
+      </div>    
 
        
 

@@ -3,7 +3,7 @@
 <head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="A space where you can find useful tips and information on coding in particular and computer technologies in general.">
+		<meta name="description" content="A space where you can find useful tips, tricks, how-tos, tutorials and news on programming in particular and technology in general.">
 		<meta name="author" content="Joe Jean">
 		<meta name="robots" content="all">
 		<meta name="keywords" content="coding, python, computer science student, web development, computer programming tips">
@@ -12,9 +12,13 @@
         <link rel="stylesheet" href="http://localhost:8000/theme/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="http://localhost:8000/theme/css/joeblog-bootstrap.css" />
 		<link rel="stylesheet" href="http://localhost:8000/theme/css/font-awesome.min.css" />
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400italic,700,400' rel='stylesheet' type='text/css'>
 		<link rel="icon" href="http://localhost:8000/theme/images/favicon.ico" />
 		
         <link href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="JoeJean.info Atom Feed" />
+		
+		<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+		
 </head>
 
 <body>
@@ -40,8 +44,7 @@
                     <li><a href="http://localhost:8000/pages/about-me/">About Me</a></li>
                     <li><a href="http://localhost:8000/pages/portfolio/">Portfolio</a></li>
                 
-                    <li><a href="http://localhost:8000/category/coding/">Coding</a></li>
-                    <li><a href="http://localhost:8000/category/tech-news/">Tech News</a></li>
+                    <li><a href="http://localhost:8000/category/programming/">Programming</a></li>
 			<li><a href="http://localhost:8000/files/Joe_Jean_CV.pdf" target="_blank"> CV </a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
@@ -57,12 +60,15 @@
 		<div class="col-md-8">
 	
 			<div class="panel panel-primary">
-			<div class="panel-heading"> <i class="fa fa-tag"></i> <strong>Tags:</strong><a class="whitelink" href="http://localhost:8000/tag/python/">python</a> <a class="whitelink" href="http://localhost:8000/tag/post/">post</a> 			<span class="pull-right"> <i class="fa fa-folder"></i> <strong>Category:</strong> <a class="whitelink" href="http://localhost:8000/category/tech-news/">Tech News</a></span></div>
+			<div class="panel-heading"> <i class="fa fa-tag"></i> <strong>Tags:</strong><a class="whitelink" href="http://localhost:8000/tag/python/">python</a> <a class="whitelink" href="http://localhost:8000/tag/programming/">programming</a> 			<span class="pull-right"> <i class="fa fa-folder"></i> <strong>Category:</strong> <a class="whitelink" href="http://localhost:8000/category/programming/">Programming</a></span></div>
 			<div class="panel-body">
-			<h2><a href="http://localhost:8000/articles/fourth-test-post/">This is a fourth test post</a></h2>
-			<p><p>Short version for fourth test post</p>...<a href="http://localhost:8000/articles/fourth-test-post/"> Read More</a><p>
+			<h2><a href="http://localhost:8000/articles/5-tips-for-writing-more-concise-elegant-python/">5 Tips for writing more concise and elegant code in Python</a></h2>
+			<p><p>Last week, I was reviewing some of the first lines of code I wrote when I was learning python three years ago. While they worked, I have now realised that
+there are many things I could have done in a more elegant and concise way. Of course, when learning a new programming language one is always 
+encouraged to build things from scratch, to write one's own functions, classes or methods to do things even when such code might already exist. 
+...<a href="http://localhost:8000/articles/5-tips-for-writing-more-concise-elegant-python/"> Read More</a><p>
 			</div>
-			<div class="panel-footer"> <i class="fa fa-user"></i> by Joe Jean <span class="pull-right"> <i class="fa fa-calendar"></i> Sat 28 December 2013</span> </div>
+			<div class="panel-footer"> <i class="fa fa-user"></i> by Joe Jean <span class="pull-right"> <i class="fa fa-calendar"></i> Tue 11 February 2014</span> </div>
 			</div>
 		
 <ul class="pager">
@@ -84,8 +90,7 @@
 			 
 				<img src="https://dl.dropboxusercontent.com/u/73165478/Joe_Jean_ID.jpg" alt="Joe Jean Picture" class="img-circle img-responsive">
 
-				<p> My name is Joe Jean. I'm a sophomore studying Computer Science at New York University Abu Dhabi <a href="http://nyuad.nyu.edu" target="_blank">(NYUAD)</a>. 
-				I'm a passionate of computers. This site will contain interesting information particularly about Information Technology.
+				<p> My name is Joe Jean. I'm a passionate web developer. This site will contain useful information on topics related to technology in general and computer programming in particular.
                 <a href="http://localhost:8000/pages/about-me">Learn more about me</a> </p>
                 
 			
@@ -124,18 +129,20 @@
         </div>
     </div>
       
-    <hr class="btn-custom">
+
        
 
         <footer>
 			<div class="row">
 			  <div class="col-md-12">
-				<p> Copyright &copy; Joe Jean 2013. This site is proudly powered by <a href="http://docs.getpelican.com/en/3.3.0/" target="_blank">Pelican</a>.
+			    <hr class="btn-custom">
+				<p> Copyright &copy; Joe Jean 2013-2014. This site is proudly powered by <a href="http://docs.getpelican.com/en/3.3.0/" target="_blank">Pelican</a>.
                 <span class="pull-right">
                        
                             <i class="fa fa-rss"></i> <a href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom feed</a>
                 </span>
 				</p>
+				<br >
 			  </div>
 			</div>
 		</footer>
@@ -165,22 +172,27 @@
     </script>
     
 	</div><!-- /.container -->
-	<!-- AddThis Button BEGIN/ Social Sharing Button -->
-		
-		<div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="left:0px;top:98px;">
-		<a class="addthis_button_facebook"></a>
-		<a class="addthis_button_twitter"></a>
-		<a class="addthis_button_google_plusone_share"></a>
-		<a class="addthis_button_linkedin"></a>
-		<a class="addthis_button_pinterest_share"></a>
-		<a class="addthis_button_email"></a>
-		</div>
+	
+	
+		<!-- AddThis Smart Layers BEGIN -->
+		<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
 		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52c08d4000058eed"></script>
-
-	<!-- AddThis Button END -->
+		<script type="text/javascript">
+		  addthis.layers({
+			'theme' : 'transparent',
+			'share' : {
+			  'position' : 'left',
+			  'numPreferredServices' : 4
+			}   
+		  });
+		</script>
+		<!-- AddThis Smart Layers END -->
+		
 	
 	<!-- JavaScript -->
     <script src="http://localhost:8000/theme/js/jquery-1.10.2.min.js"></script>
     <script src="http://localhost:8000/theme/js/bootstrap.min.js"></script>
+	<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

@@ -21,6 +21,9 @@
         {% if FEED_ALL_RSS %}
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
         {% endif %}
+		
+		<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+		
 </head>
 
 <body>
@@ -116,5 +119,7 @@
 	<!-- JavaScript -->
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery-1.10.2.min.js"></script>
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script>
+	<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

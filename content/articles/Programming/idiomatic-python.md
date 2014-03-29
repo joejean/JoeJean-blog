@@ -4,13 +4,13 @@ Tags: python, programming
 Slug: 5-tips-for-writing-more-concise-elegant-python
 Author: Joe Jean
 
-Last week, I was reviewing some of the first lines of code I wrote when I was learning python three years ago. While they worked, I have now realised that
+Last week, I was reviewing some of the first lines of code I wrote when I was learning python three years ago. While they worked, I now realise that
 there are many things I could have done in a more elegant and concise way. Of course, when learning a new programming language one is always 
-encouraged to build things from scratch, to write one's own functions, classes or methods to do things even when such code might already exist. 
+encouraged to build things from scratch, to write one's own functions, classes or methods to do things even when such code might already exists. 
 <!-- PELICAN_END_SUMMARY -->
 
-This approach is definitely useful for a beginner. However, once one understands the basics,it is a good idea to start using code and techniques already 
-provided -at least by the programming language itself. This will not only help you build things faster but also -in most cases- make your code more concise and readable. 
+This approach is definitely useful for a beginner. However, once one understands the basics, it is a good idea to start using code and techniques already 
+provided --at least by the programming language itself. This will not only help you build things faster but also -- in most cases -- make your code more concise and readable. 
 The following are five tips that you can start using today to make your python code more concise and elegant. 
 
 ### 1) Prefer the return statement to evaluate your expression and return its result for you
@@ -24,32 +24,32 @@ def isEven(a):
 		result = False
 	return result
 </code></pre>
-However, a more elegant way to reach the same result is to provide the entire expression to the return statement and it will compute and return the result of the
+However, a more elegant way to reach the same result is to put the entire expression in the return statement and it will compute and return the result of the
 expression as follow:
 <pre><code>
 def isEven(a):
 	return (a % 2)==0
 </code></pre>
-This is possible because the return statement actually returns the result of evaluating an expression. And in case you are wondering, numbers eveluate to themselves.
+This is possible because the return statement actually returns the result of evaluating an expression. And in case you are wondering, in python numbers eveluate to themselves.
 
-### 2) Prefer Python's builtin ```format()```function to format your strings
+### 2) Prefer Python's builtin ```format()``` function to format your strings
 Imagine you have an object called "Player" which has attributes such has name and age. Now imagine that you have
-a function calles printPlayerInfo() that prints the player's information. One would usually uses the plus sign (+) to concatenate one's string literals with
-one's string variables, such as this:
+a function called printPlayerInfo() that prints the player's information. One would usually uses the plus sign (+) to concatenate the string literals with
+the string variables, such as this:
 <pre><code>
 def printPlayerInfo(Player):
 	return "The player's name is "+Player.name+" and the player is "+str(Player.age)+" years old"
 </code></pre>	
-However, a more elegant way to do this is to use python's builtin format() function, thus our function becomes:
+However, a more elegant way to do this is to use python's builtin format() function. Thus our function becomes:
 
 <pre><code>
 def printPlayerInfo(Player):
 	return "The player Name is {Player.name} and the player is {Player.age} years old".format(Player=Player)
 </code></pre>	
-As you can see, in addittion to making your code more readable, the format function spare the programmer the extra burden of casting all numbers to strings.	
+As you can see, in addittion to making your code more readable, the format function spares the programmer the extra burden of casting all numbers to strings.	
 
 ### 3) Prefer a tuple instead of a temporary variable when swaping the values of two variables
-When one wants to swap the values of two variables, they usually use a third variable as a temporary storage for one of the two values. Let's imagine,we have 
+When one wants to swap the values of two variables, they usually use a third variable as a temporary storage for one of the two values. Let's imagine that 
 we want to swap the values of the variables ```currentScore``` and ```prevScore```, one usually proceed as follow:
 
 <pre><code>
@@ -110,7 +110,7 @@ nameList = ["aaa", "bbb", "aaa", "ccc", "ddd"]
 count = nameList.count("aaa")
 </code></pre>
 
-The python list data type hase more of those useful builtin methods that can not only make more life easier but aslo make your code more readable and concise. 
+The python list data type has more of those useful builtin methods that can not only make your life easier but aslo make your code more readable and concise. 
 You can find them in the <a href = "http://docs.python.org/2/tutorial/datastructures.html#more-on-lists" target="_blank"> python documentation.</a>
 <br />
 <br />

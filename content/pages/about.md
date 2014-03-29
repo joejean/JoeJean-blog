@@ -33,6 +33,6 @@ When I'm not writing codes or playing with a new technology, you can find me pla
 I also love traveling the world!
 
 
-### I have more questions for you, how do I contact you? 
-Please just shoot me a message at **joe [at] joejean.info** and I will be glad to reply back as soon as possible. Or you can connect with me via the different social networks 
+### I have more questions for you / I want to hire you, how do I contact you? 
+Please just shoot me a message at **joe [at] joejean.net** and I will be glad to reply back as soon as possible. Or you can connect with me via the different social networks 
 whose links are listed on the upper right part of the site. I hope to hear from you!

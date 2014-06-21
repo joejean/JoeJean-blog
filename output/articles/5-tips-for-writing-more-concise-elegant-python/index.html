@@ -31,7 +31,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand img-responsive" href="http://localhost:8000"> <img src="http://localhost:8000/theme/images/JoeJeanLogo.png" class="img-responsive"/></a>
+          <a class="navbar-brand img-responsive" href="http://localhost:8000"> <img src="http://localhost:8000/theme/images/joejeanlogo.png" class="img-responsive"/></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -44,6 +44,7 @@
                     <li><a href="http://localhost:8000/pages/about-me/">About Me</a></li>
                     <li><a href="http://localhost:8000/pages/portfolio/">Portfolio</a></li>
                 
+                    <li><a href="http://localhost:8000/category/general/">General</a></li>
                     <li class="active"><a href="http://localhost:8000/category/programming/">Programming</a></li>
 			<li><a href="http://localhost:8000/files/Joe_Jean_CV.pdf" target="_blank"> CV </a></li>
           </ul>
@@ -63,12 +64,12 @@
 			<span class="glyphicon glyphicon-tag"></span> under: <span class="badge">Programming</span> </p>
           <hr>
           
-          <p>Last week, I was reviewing some of the first lines of code I wrote when I was learning python three years ago. While they worked, I have now realised that
+          <p>Last week, I was reviewing some of the first lines of code I wrote when I was learning python three years ago. While they worked, I now realise that
 there are many things I could have done in a more elegant and concise way. Of course, when learning a new programming language one is always 
-encouraged to build things from scratch, to write one's own functions, classes or methods to do things even when such code might already exist. 
+encouraged to build things from scratch, to write one's own functions, classes or methods to do things even when such code might already exists. 
 </p>
-<p>This approach is definitely useful for a beginner. However, once one understands the basics,it is a good idea to start using code and techniques already 
-provided -at least by the programming language itself. This will not only help you build things faster but also -in most cases- make your code more concise and readable. 
+<p>This approach is definitely useful for a beginner. However, once one understands the basics, it is a good idea to start using code and techniques already 
+provided --at least by the programming language itself. This will not only help you build things faster but also -- in most cases -- make your code more concise and readable. 
 The following are five tips that you can start using today to make your python code more concise and elegant. </p>
 <h3>1) Prefer the return statement to evaluate your expression and return its result for you</h3>
 <p>Sometimes you have a function that returns the result of an expression. Let's say it's a boolean expression, so the return value can be either 
@@ -81,30 +82,30 @@ def isEven(a):
         result = False
     return result
 </code></pre>
-However, a more elegant way to reach the same result is to provide the entire expression to the return statement and it will compute and return the result of the
+However, a more elegant way to reach the same result is to put the entire expression in the return statement and it will compute and return the result of the
 expression as follow:
 <pre><code>
 def isEven(a):
     return (a % 2)==0
 </code></pre>
-This is possible because the return statement actually returns the result of evaluating an expression. And in case you are wondering, numbers eveluate to themselves.</p>
-<h3>2) Prefer Python's builtin <code>format()</code>function to format your strings</h3>
+This is possible because the return statement actually returns the result of evaluating an expression. And in case you are wondering, in python numbers eveluate to themselves.</p>
+<h3>2) Prefer Python's builtin <code>format()</code> function to format your strings</h3>
 <p>Imagine you have an object called "Player" which has attributes such has name and age. Now imagine that you have
-a function calles printPlayerInfo() that prints the player's information. One would usually uses the plus sign (+) to concatenate one's string literals with
-one's string variables, such as this:
+a function called printPlayerInfo() that prints the player's information. One would usually uses the plus sign (+) to concatenate the string literals with
+the string variables, such as this:
 <pre><code>
 def printPlayerInfo(Player):
     return "The player's name is "+Player.name+" and the player is "+str(Player.age)+" years old"
 </code></pre> <br />
-However, a more elegant way to do this is to use python's builtin format() function, thus our function becomes:</p>
+However, a more elegant way to do this is to use python's builtin format() function. Thus our function becomes:</p>
 <pre><code>
 def printPlayerInfo(Player):
     return "The player Name is {Player.name} and the player is {Player.age} years old".format(Player=Player)
 </code></pre>
 
-<p>As you can see, in addittion to making your code more readable, the format function spare the programmer the extra burden of casting all numbers to strings.    </p>
+<p>As you can see, in addittion to making your code more readable, the format function spares the programmer the extra burden of casting all numbers to strings.   </p>
 <h3>3) Prefer a tuple instead of a temporary variable when swaping the values of two variables</h3>
-<p>When one wants to swap the values of two variables, they usually use a third variable as a temporary storage for one of the two values. Let's imagine,we have 
+<p>When one wants to swap the values of two variables, they usually use a third variable as a temporary storage for one of the two values. Let's imagine that 
 we want to swap the values of the variables <code>currentScore</code> and <code>prevScore</code>, one usually proceed as follow:</p>
 <pre><code>
 currentScore = 34
@@ -160,7 +161,7 @@ nameList = ["aaa", "bbb", "aaa", "ccc", "ddd"]
 count = nameList.count("aaa")
 </code></pre>
 
-<p>The python list data type hase more of those useful builtin methods that can not only make more life easier but aslo make your code more readable and concise. 
+<p>The python list data type has more of those useful builtin methods that can not only make your life easier but aslo make your code more readable and concise. 
 You can find them in the <a href = "http://docs.python.org/2/tutorial/datastructures.html#more-on-lists" target="_blank"> python documentation.</a>
 <br />
 <br />
@@ -211,7 +212,7 @@ You can find them in the <a href = "http://docs.python.org/2/tutorial/datastruct
                     <li> <i class="fa fa-linkedin-square"></i> <a href="http://ae.linkedin.com/in/joejean/">LinkedIn</a></li>
 					<li> <i class="fa fa-google-plus"></i> <a href="http://google.com/+JoeJean">Google+</a></li>
 					<li> <i class="fa fa-github"></i> <a href="https://github.com/joejean">GitHub</a></li>
-                    <li> <i class="fa fa-envelope"></i> <a href="mailto:joe@joejean.info">Email</a></li>
+                    <li> <i class="fa fa-envelope"></i> <a href="mailto:joe@joejean.net">Email</a></li>
                 </ul>
             
             <hr class="btn-custom">
@@ -219,8 +220,11 @@ You can find them in the <a href = "http://docs.python.org/2/tutorial/datastruct
 			<h3> <i class="fa fa-tags"></i> Tags</h3>
 				<ul class="list-unstyled">
 					
-						<li class="tag-4"><a href="http://localhost:8000/tag/programming/">programming</a></li>
+						<li class="tag-4"><a href="http://localhost:8000/tag/information/">information</a></li>
+						<li class="tag-4"><a href="http://localhost:8000/tag/books/">books</a></li>
 						<li class="tag-4"><a href="http://localhost:8000/tag/python/">python</a></li>
+						<li class="tag-4"><a href="http://localhost:8000/tag/reading/">reading</a></li>
+						<li class="tag-4"><a href="http://localhost:8000/tag/programming/">programming</a></li>
 				</ul>
                     
                
@@ -254,7 +258,7 @@ You can find them in the <a href = "http://docs.python.org/2/tutorial/datastruct
 			<div class="row">
 			  <div class="col-md-12">
 			    <hr class="btn-custom">
-				<p> Copyright &copy; Joe Jean 2013-2014. Designed and built by <a href="http://joejean.info">Joe Jean</a>.
+				<p> Copyright &copy; Joe Jean 2013-2014. Designed and built by <a href="mailto:joe@joejean.net">Joe Jean</a>.
                 <span class="pull-right">
                        
                             <i class="fa fa-rss"></i> <a href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom feed</a>

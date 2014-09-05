@@ -2,39 +2,41 @@
 {% block title %} Home | {{ SITENAME }}{% endblock %}
 {% block content %}
     <div class="row">
-	
-	
-		
-		
+
+
+
+
 		<div class="col-md-8">
 		{% for article in articles_page.object_list %}
-	
-			<div class="panel panel-primary">
-			<div class="panel-heading"> <i class="fa fa-tag"></i> <strong>Tags:</strong>{% for tag in article.tags %}<a class="whitelink" href="{{ SITEURL }}/{{ tag.url }}">{{tag}}</a> {% endfor %}
-			<span class="pull-right"> <i class="fa fa-folder"></i> <strong>Category:</strong> <a class="whitelink" href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></span></div>
-			<div class="panel-body">
-			<h2><a href="{{ SITEURL}}/{{article.url}}">{{ article.title }}</a></h2>
-			<p>{{article.summary}}...<a href="{{ SITEURL }}/{{article.url}}"> Read More</a><p>
-			</div>
-			<div class="panel-footer"> <i class="fa fa-user"></i> by {{ article.author }} <span class="pull-right"> <i class="fa fa-calendar"></i> {{ article.locale_date }}</span> </div>
-			</div>
+				{% if (article.category != "Mashups") %}
+
+					<div class="panel panel-primary">
+					<div class="panel-heading"> <i class="fa fa-tag"></i> <strong>Tags:</strong>{% for tag in article.tags %}<a class="whitelink" href="{{ SITEURL }}/{{ tag.url }}">{{tag}}</a> {% endfor %}
+					<span class="pull-right"> <i class="fa fa-folder"></i> <strong>Category:</strong> <a class="whitelink" href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></span></div>
+					<div class="panel-body">
+					<h2><a href="{{ SITEURL}}/{{article.url}}">{{ article.title }}</a></h2>
+					<p>{{article.summary}}...<a href="{{ SITEURL }}/{{article.url}}"> Read More</a><p>
+					</div>
+					<div class="panel-footer"> <i class="fa fa-user"></i> by {{ article.author }} <span class="pull-right"> <i class="fa fa-calendar"></i> {{ article.locale_date }}</span> </div>
+					</div>
+				{% endif %}
 		{% endfor %}
-		
+
 		{% include 'pagination.html' %}
 		</div>
-		
-	
-		
-		
+
+
+
+
 		<!-- Social -->
 		<div class="col-md-1">
-		
+
 		</div>
-		
+
         <div class="col-md-3">
           {% include 'right_sidebar.html' %}
         </div> <!-- col-md-3 -->
     </div>
-      
+
 
 {% endblock %}

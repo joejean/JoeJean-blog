@@ -4,7 +4,7 @@ Tags: mashups, programming, javascript, api
 Slug: how-to-set-default-value-for-function-parameter-in-javascript
 Author: Joe Jean
 
-This week  my homework has two parts. In the first part, I have to solve the three exercises found <a href="http://eloquentjavascript.net/02_program_structure.html" target="_blank">at the end of chapter two</a> of the book Eloquent Javascript.<!-- PELICAN_END_SUMMARY --> In the second part, I have to describe what I'm thinking about doing for my first single page app project, how the data flow might work, and what the experience of a user visiting the site would be like.
+This week  my homework has two parts. In the first part, I have to solve the three exercises found <a href="http://eloquentjavascript.net/02_program_structure.html" target="_blank">at the end of chapter two</a> in the book Eloquent Javascript.<!-- PELICAN_END_SUMMARY --> In the second part, I have to describe what I'm thinking about doing for my first single page app project, how the data flow might work, and what the experience of a user visiting the site would be like.
 
 ### How to set a default value for function parameter in Javascript
 The first exercise was to write a loop that makes seven calls to console.log to output the following triangle:
@@ -19,9 +19,9 @@ The first exercise was to write a loop that makes seven calls to console.log to 
 
 
 
-As my solution for this exercise, I decided to create a function&mdash;```drawRightTriangle(height)```&mdash; that would take a paramter called ```height``` which represents the height of the triangle. So, instead of seven calls to console.log, the program would make 10, 12, 3 etc depending on the value provided by the user to the ```height``` parameter. But I also wanted to  give a default value to the parameter ```height``` so that the user can alternatively call the function without passing any arguments, as in ```drawRightTriangle()```. Being a Python programmer, I quickly assumed
+As my solution for this exercise, I decided to create a function&mdash;```drawRightTriangle(height)```&mdash; that would take a parameter called ```height``` which represents the height of the triangle. So, instead of seven calls to console.log, the program would make 3, 10, 12, etc. depending on the value provided by the user to the ```height``` parameter. I also wanted to  give a default value to the parameter ```height``` so that the user can alternatively call the function without passing any arguments, as in ```drawRightTriangle()```. Being a Python programmer, I quickly assumed
 I could achieve this with a line as simple as ```drawRightTriangle(height==8)```, but it does not work like that in Javascript.
-So, after a little bit of research I found a <a href="http://stackoverflow.com/questions/894860/set-a-default-parameter-value-for-a-javascript-function" target="_blank">Stackoverflow thread</a> that shows how to do it using the "typeof" operator to test whether the paramter is ```undefined```. If it is, you assign it the default value, otherwise you just use it as it is, i.e , use the value provided by the user. The code is as follow: ```height = typeof height !== 'undefined'? height: 7;```. By the way, the ```?``` is called the ternary operator&mdash;```condition ? value_if_true : value_if_false```. I could have achieved the same thing by using ```if ... else```. Here are the solutions for all three exercises:
+So, after a little bit of research, I found a <a href="http://stackoverflow.com/questions/894860/set-a-default-parameter-value-for-a-javascript-function" target="_blank">Stackoverflow thread</a> that shows how to do it using the "typeof" operator to test whether the paramter is ```undefined```. If it is, you assign it the default value, otherwise you just use it as it is, i.e , use the value provided by the user. The code is as follow: ```height = typeof height !== 'undefined'? height: 7;```. By the way, the ```?``` is called the ternary operator&mdash;```condition ? value_if_true : value_if_false```. I could have achieved the same thing by using ```if ... else```. Here are the solutions for all three exercises:
 <pre>
     <code>
       // Solutions to exercises from chapter 2 of Eloquent Javascript
@@ -86,4 +86,4 @@ You can run and test these functions by opening <a href="/files/mashups/hmw_2.ht
 
 
 ### First project idea
-For my first single page app, I don't really know what I want to do yet. All I know for sure now is I want to make something cool. One not so cool idea I have so far is to use the NY Times API and a text to speech API in order to allow a robot to read the news to the user. Not so cool, right? I know. I promise to come up with somehting cool. Please stay tuned.
+For my first single page app, I don't really know what I want to do yet. At this point, all I know for sure now is I want to make something cool. One not-so-cool idea I have so far is to use the NY Times API and a text to speech API in order to allow a robot to read the news to the user. Not-so-cool, right? I know. I promise to come up with somehting cool. Please stay tuned.

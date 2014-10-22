@@ -5,7 +5,6 @@ Slug: my-favorite-class-materials-so-far
 Author: Joe Jean
 
 
-##My Favorite Class Materials So Far
 
 I can't believe we are already in the middle of this great class, in fact one of my favorite so far.
 Over the past weeks, we have used a lot of great tutorials/videos and articles as learning materials for the class.

@@ -4,7 +4,7 @@ Tags: mashups, programming, javascript, api
 Slug: ideas-for-second-project
 Author: Joe Jean
 
-##Some Ideas For my Second Project
+
 For my second project for this class, I have two ideas. I would like to implement one during this week
 and work on the other when I have more free time. Okay, without further ado here they are.
 

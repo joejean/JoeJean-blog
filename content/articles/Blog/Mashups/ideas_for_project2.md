@@ -1,4 +1,4 @@
-Title: Ideas for Second Project
+Title: [Mashups Class] Ideas for Second Project
 Date: 2014-10-21 17:40
 Tags: mashups, programming, javascript, api
 Slug: ideas-for-second-project

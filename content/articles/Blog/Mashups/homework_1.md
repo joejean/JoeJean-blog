@@ -1,4 +1,4 @@
-Title: Playing with an open API
+Title: [Mashups Class] Playing with an open API
 Date: 2014-09-05 16:01
 Tags: mashups, programming, javascript, api
 Slug: playing-with-an-open-api

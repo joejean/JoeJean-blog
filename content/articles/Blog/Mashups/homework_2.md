@@ -1,4 +1,4 @@
-Title: How to set a default value for a function's parameter in Javascript & first project idea
+Title: [Mashups Class] How to set a default value for a function's parameter in Javascript & first project idea
 Date: 2014-09-16 02:03
 Tags: mashups, programming, javascript, api
 Slug: how-to-set-default-value-for-function-parameter-in-javascript

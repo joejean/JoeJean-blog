@@ -1,4 +1,4 @@
-Title: My Favorite Class Materials So Far
+Title: [Mashups Class] My Favorite Class Materials So Far
 Date: 2014-10-19 23:00
 Tags: mashups, programming, javascript, api
 Slug: my-favorite-class-materials-so-far

@@ -14,16 +14,16 @@
 		<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/font-awesome.min.css" />
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400italic,700,400' rel='stylesheet' type='text/css'>
 		<link rel="icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/favicon.ico" />
-		
+
         {% if FEED_ALL_ATOM %}
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
         {% endif %}
         {% if FEED_ALL_RSS %}
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
         {% endif %}
-		
+
 		<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
-		
+
 </head>
 
 <body>
@@ -42,37 +42,41 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav pull-right">
-		  
+
 			<li {% if page_name =='index' %} class="active" {% endif %}><a href="{{SITEURL}}">Home</a></li>
-			
+
 			{% for title, link in MENUITEMS %}
-			
+
 			<li><a href="{{ link }}">{{ title }}</a></li>
-            
+
 			{% endfor %}
-			
+
 			{% if DISPLAY_PAGES_ON_MENU -%}
                 {% for pg in PAGES %}
                     <li{% if pg == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a></li>
                 {% endfor %}
             {% endif %}
-                
+
 			{% if DISPLAY_CATEGORIES_ON_MENU -%}
+
                 {% for cat, null in categories %}
-                    <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+
+                      <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+
                 {% endfor %}
-            {% endif %}
+
+      {% endif %}
 			<li><a href="{{SITEURL}}/files/Joe_Jean_CV.pdf" target="_blank"> CV </a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
     </nav>
-	
+
     <div class="container">
         {% block content %}
-		
+
         {% endblock %}
-       
+
 
         <footer>
 			<div class="row">
@@ -81,7 +85,7 @@
 				<p> Copyright &copy; Joe Jean 2013-2014. Designed and built by <a href="mailto:joe@joejean.net">Joe Jean</a>.
 				{% if SOCIAL or FEED_ALL_ATOM or FEED_ALL_RSS %}
                 <span class="pull-right">
-                       
+
                             {% if FEED_ALL_ATOM %}
                             <i class="fa fa-rss"></i> <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate">Atom feed</a>
                             {% endif %}
@@ -99,8 +103,8 @@
 		{% include 'analytics.html' %}
 		{% include 'disqus_script.html' %}
 	</div><!-- /.container -->
-	
-	
+
+
 		<!-- AddThis Smart Layers BEGIN -->
 		<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
 		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52c08d4000058eed"></script>
@@ -110,12 +114,12 @@
 			'share' : {
 			  'position' : 'left',
 			  'numPreferredServices' : 4
-			}   
+			}
 		  });
 		</script>
 		<!-- AddThis Smart Layers END -->
-		
-	
+
+
 	<!-- JavaScript -->
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery-1.10.2.min.js"></script>
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script>

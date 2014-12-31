@@ -33,4 +33,6 @@ h6,
 .navbar-default .navbar-nav>.disabled>a,.navbar-default .navbar-nav>.disabled>a:hover,.navbar-default .navbar-nav>.disabled>a:focus{color:#ccc;background-color:transparent}
 .whitelink{color:#fff}.whitelink:hover,.whitelink:focus{color:#333;background-color:transparent}
 .panel-primary>.panel-heading{background-color: #4067df;border-color: #4067df}
-  
+
+
+.thumbnailPic { height: 200; }

@@ -1,5 +1,7 @@
 deployment:
   production:
     branch: master
-    heroku:
-      appname: joeblog
+  commands:
+      - git push git@heroku.com:joeblog.git $CIRCLE_SHA1:master -f
+    #heroku:
+      #appname: joeblog

@@ -1,4 +1,4 @@
 *.pyc
 *.pyo
-output
-cache
+output/
+cache/

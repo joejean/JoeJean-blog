@@ -15,7 +15,7 @@ I wanted to start contributing to open source projects. So I paired with Tom, on
 
 At RC, every Friday there is an optional interview preparation session. During this week's session we worked on a command line phone book application. In my [implementation](https://github.com/joejean/phonebook) I used python with sqlite. Other people used JavaScript, Go, Java etc.. ; a reminder of how diverse Recursers are. Tom helped me and gave me some great feedback on my implementation. 
 
-Overall, my first week at RC was a good one. At the beginning I was a little nervous and I was not comfortable revealing my ignorances. But as I interact more with the facilitators and fellow Recursers I'm becoming more and more comfortable saying “I don't know” which is something that is strongly encouraged at RC. After all, every time I keep my ignorances secret, I miss an opportunity to learn something new and get better. Jake Scruggs sums it up well when he said:
+Overall, my first week at RC was a good one. At the beginning I was a little nervous and I was not comfortable revealing my ignorances. But as I interact more with the facilitators and fellow Recursers I'm becoming more and more comfortable saying “I don't know” which is something that is strongly encouraged at RC. After all, every time I keep my ignorances secret, I miss an opportunity to learn something new and get better. Jake Scruggs summed it up well when he said:
 > "Tomorrow I need to look stupider and feel better about it. This staying quiet and trying to guess what's going on isn't working so well."
 
 

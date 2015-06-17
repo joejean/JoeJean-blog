@@ -9,6 +9,7 @@ SITEURL = 'http://www.joejean.net'
 TIMEZONE = 'Asia/Dubai'
 DEFAULT_LANG = u'en'
 
+
 #Content settings
 PATHS = "content"
 PAGES_DIR = "pages"
@@ -80,5 +81,5 @@ PAGINATION_PATTERNS = (
 DISPLAY_CATEGORIES_ON_MENU = False
 
 #PLUGINS USED
-PLUGIN_PATH = "pelican_plugins"
+PLUGIN_PATHS = ["pelican_plugins"]
 PLUGINS = ['summary']

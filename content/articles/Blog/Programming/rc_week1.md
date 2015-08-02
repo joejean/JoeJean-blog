@@ -1,4 +1,5 @@
 Title: My First Week At the Recurse Center
+Date: 2015-05-31 11:38
 Tags: programming, summer2015, recurse center
 Slug: first-week-at-recurse-center
 Author: Joe Jean

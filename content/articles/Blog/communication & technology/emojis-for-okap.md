@@ -12,17 +12,17 @@ In order to come up with the initial emoji designs, I had to think about three t
 
 After selecting the topics I wanted the emojis to represent, I needed to come up with an actual design for each of those topics. For that I used an android app called "Emojidom Maker". It is a simple and easy to use app that lets one create some cool emojis. For someone who is not that skilled in using sophisticated design like me, the app was a  lifesaver.  After some tweaking and playing around with the app, I came up with the following designs to represent respectively the concept of attachment and pride cutivated by the native of Cap-Haitien, our love for pumpkin soup, and our most popular greeting. 
 
-<img src="https://www.dropbox.com/s/i1zj7ehv1zwb0zz/okap.png?dl=0">
-<img src="https://www.dropbox.com/s/1ck4pmc7l1vms4r/joumou.png?dl=0">
-<img src="https://www.dropbox.com/s/nqz3rewpjewcvha/sakpase.png?dl=0">
+<img src="http://www.dropbox.com/s/i1zj7ehv1zwb0zz/okap.png?dl=0">
+<img src="http://www.dropbox.com/s/1ck4pmc7l1vms4r/joumou.png?dl=0">
+<img src="http://www.dropbox.com/s/nqz3rewpjewcvha/sakpase.png?dl=0">
 
 I then shared those designs with my brother and two of my friends--who are currently living there-- and asked them for feedback. My friends said they love them and one of them especially really like the pumpkin emoji. On the other hand my brother suggested that I remove the little read hearts from it. He also said the greeting emoji would be nicer with some additional color. And there was no criticism on the first emoji. 
 
 So I went back to Emojidom Maker and I made some changes to address the feedback I received on the first versions. I only made changes to the last two emojis. I removed the little hearts from the pumpkin emoji and I also added a little bit of color to the greeting emoji. The final versions are shown below.
 
-<img src="https://www.dropbox.com/s/i1zj7ehv1zwb0zz/okap.png?dl=0">
-<img src="https://www.dropbox.com/s/v5e33arwzm2q4ib/joumou_2.png?dl=0">
-<img src="https://www.dropbox.com/s/o5w6oczrgo8wgqh/sakpase_2.png?dl=0">
+<img src="http://www.dropbox.com/s/i1zj7ehv1zwb0zz/okap.png?dl=0">
+<img src="http://www.dropbox.com/s/v5e33arwzm2q4ib/joumou_2.png?dl=0">
+<img src="http://www.dropbox.com/s/o5w6oczrgo8wgqh/sakpase_2.png?dl=0">
 
 I also sent those designs to three other friends of which only one of them said he did not like the pumpkin emoji because he personally does not like pumpkin soup anyways. The two other friends loved them. And they asked me if there was a way they could install them on their phone in order to use them. 
 

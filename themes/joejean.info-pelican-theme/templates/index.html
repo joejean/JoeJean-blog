@@ -3,14 +3,25 @@
 {% block content %}
     <div class="row">
 
+        <div class="col-md-3 col-md-push-9">
+          {% include 'right_sidebar.html' %}
+        </div> <!-- Side bar -->
 
+        <!-- Empty col for spacing -->
+        <div class="col-md-1">
 
+        </div>
 
-		<div class="col-md-8">
+		<div class="col-md-8 col-md-pull-4">
 		{% for article in articles_page.object_list %}
 					<div class="panel panel-primary">
-					<div class="panel-heading"> <i class="fa fa-tag"></i> <strong>Tags:</strong>{% for tag in article.tags %}<a class="whitelink" href="{{ SITEURL }}/{{ tag.url }}">{{tag}}</a> {% endfor %}
-					<span class="pull-right"> <i class="fa fa-folder"></i> <strong>Category:</strong> <a class="whitelink" href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></span></div>
+					<div class="panel-heading"> 
+                    
+                        <i class="fa fa-tag"></i> <strong>Tags:</strong>{% for tag in article.tags %}<a class="whitelink" href="{{ SITEURL }}/{{ tag.url }}">{{tag}}</a> {% endfor %}
+                        <span class="pull-right-md"> <i class="fa fa-folder"></i> <strong>Category:</strong> <a class="whitelink" href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></span>
+                    </div>
+        
+					
 					<div class="panel-body">
 					<h2><a href="{{ SITEURL}}/{{article.url}}">{{ article.title }}</a></h2>
 					<p>{{article.summary}}...<a href="{{ SITEURL }}/{{article.url}}"> Read More</a><p>
@@ -23,16 +34,7 @@
 		</div>
 
 
-
-
-		<!-- Social -->
-		<div class="col-md-1">
-
-		</div>
-
-        <div class="col-md-3">
-          {% include 'right_sidebar.html' %}
-        </div> <!-- col-md-3 -->
+        
     </div>
 
 

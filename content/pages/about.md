@@ -4,7 +4,7 @@ Slug: about-me
 Author: Joe Jean
 Summary: About me
 
-<img src ="http://www.joejean.net/images/joejean.jpg" class="img-responsive" />
+<img src ="http://www.joejean.net/images/joejean.jpg" class="img-responsive img-rounded" />
 
 
 

@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 #General info about the Site
 AUTHOR = u'Joe Jean'
 SITENAME = u"Joe Jean"
+#SITEURL=""
 SITEURL = 'http://www.joejean.net'
 TIMEZONE = 'Asia/Dubai'
 DEFAULT_LANG = u'en'

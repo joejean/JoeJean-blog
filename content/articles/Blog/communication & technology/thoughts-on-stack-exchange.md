@@ -6,7 +6,7 @@ Author: Joe Jean
 
 
 
-As a programmer I use Stack Overflow a lot. But last week my professor asked us to pick one of the Stack Exchange websites that we have never used before and experiment with it by using some of its features. This article is an analysis of my experience with Stack Exchange Expatriates. 
+As a programmer I use Stack Overflow a lot. But last week one of my professors asked us to pick one of the Stack Exchange websites that we have never used before and experiment with it by using some of its features. This article is an analysis of my experience with Stack Exchange Expatriates. 
 
 Why did I pick Stack Exchange Expatriates? Well, I wanted to pick something non technical as I already have a lot of experiences with technical forums such as [Stack Overflow](http://stackoverflow.com/), [Hacker News](https://news.ycombinator.com/), [SubReddit cscareerquestions](https://www.reddit.com/r/cscareerquestions) etc.
 

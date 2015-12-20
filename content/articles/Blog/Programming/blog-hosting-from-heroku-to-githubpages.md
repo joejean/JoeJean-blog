@@ -1,11 +1,11 @@
 Title: Moving My Personal Website from Heroku to Github Pages
 Date: 2015-11-08 09:07
 Tags: python,pelican, githubpages
-Slug: deploying-my-personal-website-tp-github-pages
+Slug: deploying-my-personal-website-to-github-pages
 Author: Joe Jean
 
 
-When I first built my personal website I deployed it to Heroku. At that time Heroku was the best option for me because it offered a free tier and it was relatively easy to use. But one thing I did not like about it was that the application dyno--the container that handles all the HTTP traffic to the site-- would go to sleep if my website receives no traffic in a 30-minute period. Consequently the next time someone tries to access the site it will take longer to load as the dyno will need to wake up first. 
+When I first built my personal website I deployed it to Heroku. At that time Heroku was the best option for me because it offered a free tier and it was relatively easy to use. But one thing I did not like about it was that the application dyno&mdash;the container that handles all the HTTP traffic to the site&mdash; would go to sleep if my website receives no traffic in a 30-minute period. Consequently the next time someone tries to access the site it will take longer to load as the dyno will need to wake up first. 
 
 The site is built with [Pelican](http://docs.getpelican.com/en/3.6.3/) which is a static site generator written in Python. A static site generator basically takes text written in a plain text markup format such as Markdown and converts it to HTML pages using predefined templates. So, after defining the templates for my website, whenever I need to publish new content such as this article I only need to write raw text in a MarkDown file and Pelican will handle the rest for me. Among other advantages, this approach is easy to use and results in a really fast website that can be easily deployed to GitHub Pages. 
 
@@ -22,12 +22,12 @@ And third, I issued the command ```git push git@github.com:joejean/joejean.githu
 
 ## Setting up the custom domain
 I tried many different approaches while setting up the custom domain, but what follows is the only approach that worked for me. 
-I started by creating a [CNAME file](https://github.com/joejean/joejean.github.io/blob/cname/CNAME) with the content ```www.joejean.net``` and commit it to a different branch in the same ```joejean.github.io``` repository. 
+I started by creating a [CNAME file](https://github.com/joejean/joejean.github.io/blob/cname/CNAME) with the content ```www.joejean.net``` and commit it to a different branch&mdash;which can have any name&mdash; in the same ```joejean.github.io``` repository. Then I merged that branch with the master branch of the ```joejean.github.io``` repository. 
 
-Then I opened the domain name administration page at my domain name registrar and I created two A records which points respectivley to the GitHub IPs ```192.30.252.153``` and ```192.30.252.154```. After that, the last step was to create a CNAME record for the subdomain ```www.joejean.net``` that points to ```joejean.github.io```. The following screenshot summarize the configurations:
+Then I opened the domain administration page at my domain name registrar and I created two A records which points respectivley to the GitHub IPs ```192.30.252.153``` and ```192.30.252.154```. After that, the last step was to create a CNAME record for the subdomain ```www.joejean.net``` that points to ```joejean.github.io```. The following screenshot summarizes the configurations:
 <img src ="http://www.joejean.net/images/dns.png" class="img-responsive img-rounded" />
 
-So now my site is being served from GitHub pages and load with the same lightning speed no matter when it is accessed. It is important to note that GitHub Pages only work for static sites. 
+So now my site is being served from GitHub pages and loads with the same lightning speed no matter when it is accessed. It is important to note that GitHub Pages only work for static sites. 
 
 
 

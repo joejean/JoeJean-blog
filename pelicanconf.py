@@ -16,10 +16,12 @@ PATHS = "content"
 PAGES_DIR = "pages"
 ARTICLES_DIR = "articles"
 
-STATIC_PATHS = ['images', 'files']
+STATIC_PATHS = ['images', 'files', 'extra/CNAME']
 EXTRA_PATH_METADATA = {
     'files/robots.txt': {'path': 'robots.txt'},
-    'images/favicon.ico': {'path': 'favicon.ico'},}
+    'images/favicon.ico': {'path': 'favicon.ico'},
+    'extra/CNAME': {'path': 'CNAME'},
+    }
 
 
 #DEFAULT_DATE_FORMAT = ('%d-%m-%Y')

@@ -82,7 +82,7 @@
 			<div class="row">
 			  <div class="col-md-12">
 			    <hr class="btn-custom">
-				<p> Copyright &copy; Joe Jean 2014-2015. Designed and built by <a href="mailto:joe@joejean.net">Joe Jean</a>.
+				<p> Copyright &copy; Joe Jean 2014-<span id="current_year"></span>. Designed and built by <a href="mailto:joe@joejean.net">Joe Jean</a>.
 				{% if SOCIAL or FEED_ALL_ATOM or FEED_ALL_RSS %}
                 <span class="pull-right">
 
@@ -125,5 +125,8 @@
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script>
 	<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript">
+        $('#current_year').text((new Date()).getFullYear());
+    </script>
 </body>
 </html>

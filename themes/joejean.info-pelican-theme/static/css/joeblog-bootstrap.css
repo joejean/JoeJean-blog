@@ -2,9 +2,10 @@ body {
     margin-top: 80px;
     /* 100px is double the height of the navbar - I made it a big larger for 
     some more space - keep it at 50px at least if you want to use the fixed top nav */
-    font-family: 'Merriweather', serif;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
     color: #000000;
-    font-size: 15px;
+    font-size: 20px;
 }
 footer {
     margin: 10px 0;

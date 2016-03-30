@@ -23,55 +23,7 @@
 		</div>
 	
 		
-		
-		<!-- Social -->
-		<div class="col-lg-1">
-		
-		</div>
-		
-        <div class="col-lg-3">
-          <div class="well">
-			 <h3> <span class="glyphicon glyphicon-info-sign"> </span>  About Me</h3>
-				<img src="https://dl.dropboxusercontent.com/u/73165478/Joe_Jean_ID.jpg" alt="Joe Jean Picture" class="img-circle img-responsive">
-
-			<p> My name is Joe Jean. I'm a passionate web developer. This site will contain useful information on topics related to technology in general and computer programming in particular.
-                <a href="{{ SITEURL }}/pages/about-me">Learn more about me</a> </p>
-                
-                
-			
-			<hr class="btn-custom">
-			
-            <h3> <span class="glyphicon glyphicon-envelope"> </span> Get In Touch</h3>
-				<ul class="list-unstyled">
-                    <li> <i class="fa fa-facebook-square"></i> <a href="https://www.facebook.com/joe.jean3">Facebook</a></li>
-                    <li> <i class="fa fa-linkedin-square"></i> <a href="http://ae.linkedin.com/in/joejean/">LinkedIn</a></li>
-					<li> <i class="fa fa-google-plus"></i> <a href="http://google.com/+JoeJean">Google+</a></li>
-					<li> <i class="fa fa-github"></i> <a href="https://github.com/joejean">GitHub</a></li>
-                    <li> <i class="fa fa-envelope"></i> <a href="mailto:joe@joejean.info">Email</a></li>
-                </ul>
-            
-            <hr class="btn-custom">
-			
-          <h3><i class="fa fa-archive"></i>  Archives</h3>
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul class="list-unstyled">
-                    <li><a href="{{ SITEURL }}/archives.html/">2013</a></li>
-                    
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul class="list-unstyled">
-                    <li><a href="#alien-abductions"></a></li>
-                    
-                  </ul>
-                </div>
-              </div>
-			  
-			
-          
-          </div><!-- /well -->
-        </div>
+		 {% include 'article_right_sidebar.html' %}
     </div>
       
 {% endblock %}

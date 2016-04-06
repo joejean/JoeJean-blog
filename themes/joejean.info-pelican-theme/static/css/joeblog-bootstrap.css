@@ -94,5 +94,9 @@ h6,
 @media (min-width: 700px){
     .pull-right-md{
         float: right;
+    },
+    .panel-footer{
+        font-size: 14px !important;
     }
 }
+

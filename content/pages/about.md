@@ -10,7 +10,7 @@ Summary: About me
 
 
  
-My name is Joe Jean. I'm a Computer Science student at [New York University in Abu Dhabi](http://www.nyuad.nyu.edu). I will graduate in May 2016.
+My name is Joe Jean. In May 2016, I graduated with a Bachelor of Science degree in Computer Science from [New York University in Abu Dhabi](http://www.nyuad.nyu.edu). I love building software that make people's lives easier.
 
 
 ###Technology and I

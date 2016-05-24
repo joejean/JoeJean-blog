@@ -6,12 +6,7 @@ Summary: About me
 
 <img src ="http://www.joejean.net/images/joejean.jpg" class="img-responsive img-rounded" />
 
-
-
-
- 
 My name is Joe Jean. In May 2016, I graduated with a Bachelor of Science degree in Computer Science from [New York University in Abu Dhabi](http://www.nyuad.nyu.edu). I love building software that make people's lives easier.
-
 
 ###Technology and I
 

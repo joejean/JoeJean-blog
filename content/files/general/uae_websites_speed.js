@@ -196,7 +196,7 @@ function drawMobileChart(mobileData){
   }
 
   // Set chart options
-  var options = {'title':'Speed & Usability Scores For UAE Websites',
+  var options = {'title':'Mobile Speed & Usability Scores For UAE Websites',
                 'titlePosition':'out',
                  'width':900,
                  'height':2000,
@@ -247,7 +247,7 @@ function drawDesktopSpeedChart(desktopSpeed){
   }
 
   // Set chart options
-  var options = {'title':'Speed Scores On Desktop For UAE Websites',
+  var options = {'title':'Desktop Speed Scores For UAE Websites',
                 'titlePosition':'out',
                  'width':900,
                  'height':2000,

@@ -1,12 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import os
 
 #General info about the Site
 AUTHOR = u'Joe Jean'
 SITENAME = u"Joe Jean"
-#SITEURL=""
-SITEURL = 'http://www.joejean.net'
+
+if os.environ.get('ENV') == 'test':
+    SITEURL = 'http://localhost:8000'
+else:
+    SITEURL = 'http://www.joejean.net'
+
 TIMEZONE = 'Asia/Dubai'
 DEFAULT_LANG = u'en'
 

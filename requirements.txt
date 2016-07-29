@@ -1,4 +1,4 @@
-Fabric==1.8.1
+fabric
 Jinja2==2.7.3
 Markdown==2.3.1
 MarkupSafe==0.23
@@ -14,3 +14,5 @@ pycrypto==2.6.1
 python-dateutil==2.2
 pytz==2014.9
 six==1.8.0
+ghp-import
+

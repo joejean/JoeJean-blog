@@ -90,4 +90,19 @@ DISPLAY_CATEGORIES_ON_MENU = False
 
 #PLUGINS USED
 PLUGIN_PATHS = ["pelican_plugins"]
-PLUGINS = ['summary']
+
+PLUGINS=['sitemap', 'summary' ]
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.7,
+        'indexes': 0.5,
+        'pages': 0.8
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}

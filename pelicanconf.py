@@ -7,6 +7,8 @@ import os
 AUTHOR = u'Joe Jean'
 SITENAME = u"Joe Jean"
 
+SITEURL_LIVE = 'http://www.joejean.net'
+
 if os.environ.get('ENV') == 'test':
     SITEURL = 'http://localhost:8000'
 else:
@@ -91,7 +93,7 @@ DISPLAY_CATEGORIES_ON_MENU = False
 #PLUGINS USED
 PLUGIN_PATHS = ["pelican_plugins"]
 
-PLUGINS=['sitemap', 'summary' ]
+PLUGINS=['summary','sitemap' ]
 
 SITEMAP = {
     'format': 'xml',

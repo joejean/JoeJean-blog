@@ -25,6 +25,7 @@ ARTICLES_DIR = "articles"
 
 STATIC_PATHS = ['images', 'files', 'extra/CNAME']
 EXTRA_PATH_METADATA = {
+    'files/google49e50d70845def8a.html': {'path': 'google49e50d70845def8a.html'},
     'files/robots.txt': {'path': 'robots.txt'},
     'images/favicon.ico': {'path': 'favicon.ico'},
     'extra/CNAME': {'path': 'CNAME'},

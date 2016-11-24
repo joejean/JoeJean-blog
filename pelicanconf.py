@@ -19,7 +19,7 @@ DEFAULT_LANG = u'en'
 
 
 #Content settings
-PATHS = "content"
+PATH = "content"
 PAGES_DIR = "pages"
 ARTICLES_DIR = "articles"
 
@@ -31,8 +31,7 @@ EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
     }
 
-
-#DEFAULT_DATE_FORMAT = ('%d-%m-%Y')
+DEFAULT_DATE_FORMAT = ('%b %d, %Y')
 
 
 #Feed Generation Settings
@@ -92,7 +91,7 @@ PAGINATION_PATTERNS = (
 DISPLAY_CATEGORIES_ON_MENU = False
 
 #PLUGINS USED
-PLUGIN_PATHS = ["pelican_plugins"]
+PLUGIN_PATHS = ["pelican-plugins"]
 
 PLUGINS=['summary','sitemap' ]
 

@@ -2,7 +2,6 @@ Title: My method for finding the best books on any topic.
 Date: 2014-06-20 12:07
 Tags: books, reading, information
 Slug: my-method-for-finding-the-best-books-on-any-topic
-Author: Joe Jean
 
 I recently read an article about the importance of Computational Thinking. It is important because it helps you think about ways you can use computers 
 to solve problems -- something that the knowledge of a programming language's syntax does not necessarily provide. So, I decided to read a good book about 

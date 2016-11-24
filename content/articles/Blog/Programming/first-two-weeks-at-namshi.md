@@ -2,7 +2,6 @@ Title: My First Two Weeks At Namshi
 Date: 2016-07-28 11:38
 Tags: programming,namshi,job
 Slug: my-first-two-weeks-at-namshi
-Author: Joe Jean
 
 On July 10th, I joined [Namshi](https://namshi.com/) as a Junior Software Engineer. I was really excited to start my first full time job writing software. Though, I have to confess that I was also a bit afraid and nervous. Fortunately, after just two days working with the team the fear and nervousness went away. In this post, I will share with you some of the things I have learned so far as well as what I love about working in this awesome team.
 

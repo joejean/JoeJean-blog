@@ -25,7 +25,7 @@ I tried many different approaches while setting up the custom domain, but what f
 I started by creating a [CNAME file](https://github.com/joejean/joejean.github.io/blob/cname/CNAME) with the content ```www.joejean.net``` and commit it to a different branch&mdash;which can have any name&mdash; in the same ```joejean.github.io``` repository. Then I merged that branch with the master branch of the ```joejean.github.io``` repository. 
 
 Then I opened the domain administration page at my domain name registrar and I created two A records which points respectivley to the GitHub IPs ```192.30.252.153``` and ```192.30.252.154```. After that, the last step was to create a CNAME record for the subdomain ```www.joejean.net``` that points to ```joejean.github.io```. The following screenshot summarizes the configurations:
-<img src ="http://www.joejean.net/images/dns.png" class="img-responsive img-rounded" />
+<img src ="{filename}/images/dns.png" class="img-responsive img-rounded" />
 
 So now my site is being served from GitHub pages and loads with the same lightning speed no matter when it is accessed. It is important to note that GitHub Pages only work for static sites. 
 

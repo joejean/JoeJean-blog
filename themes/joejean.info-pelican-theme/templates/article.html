@@ -1,5 +1,11 @@
 {% extends "base.html" %}
-{% block title %}{{ article.title|striptags }}{% endblock %}
+
+{% block title %}
+	<meta name="title" content="{{ article.title|striptags }}">
+	<link rel="canonical" href="{{ SITEURL }}/{{article.url}}">
+	<title> {{ article.title|striptags }}</title>
+{% endblock %}
+
 {% block content %}
  <div class="row">
 		

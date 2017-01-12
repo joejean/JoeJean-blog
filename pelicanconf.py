@@ -7,12 +7,12 @@ import os
 AUTHOR = u'Joe Jean'
 SITENAME = u"Joe Jean"
 
-SITEURL_LIVE = 'http://www.joejean.net'
+SITEURL_LIVE = 'https://www.joejean.net'
 
 if os.environ.get('ENV') == 'test':
     SITEURL = 'http://localhost:8000'
 else:
-    SITEURL = 'http://www.joejean.net'
+    SITEURL = 'https://www.joejean.net'
 
 TIMEZONE = 'Asia/Dubai'
 DEFAULT_LANG = u'en'
@@ -26,6 +26,7 @@ ARTICLES_DIR = "articles"
 STATIC_PATHS = ['images', 'files', 'extra/CNAME']
 EXTRA_PATH_METADATA = {
     'files/google49e50d70845def8a.html': {'path': 'google49e50d70845def8a.html'},
+    'files/googleb89b17f2e489784b.html': {'path': 'googleb89b17f2e489784b.html'},
     'files/robots.txt': {'path': 'robots.txt'},
     'images/favicon.ico': {'path': 'favicon.ico'},
     'extra/CNAME': {'path': 'CNAME'},
@@ -96,6 +97,7 @@ PLUGIN_PATHS = ["pelican-plugins"]
 PLUGINS=['summary','sitemap' ]
 
 SITEMAP = {
+    'exclude': ['tag/', 'category/', 'categories.html'],
     'format': 'xml',
     'priorities': {
         'articles': 0.7,

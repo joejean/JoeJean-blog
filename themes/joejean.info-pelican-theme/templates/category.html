@@ -1,3 +1,7 @@
 {% extends "category_index.html" %}
-{% block title %}{{ category }} | {{ SITENAME }} {% endblock %}
+{% block title %}
+	<meta name="title" content="{{ category }} | {{ SITENAME }}">
+	<link rel="canonical" href="{{ SITEURL }}/{{category.url}}">
+	<title> {{ category }} | {{ SITENAME }}</title>
+{% endblock %}
 

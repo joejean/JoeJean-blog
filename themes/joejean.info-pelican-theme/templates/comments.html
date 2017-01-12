@@ -1,2 +1,6 @@
-{% block title %}Comments | {{ SITENAME }}{%endblock%}
+{% block title %}
+	<meta name="title" content="Comments | {{ SITENAME }}">
+	<title> Comments | {{ SITENAME }}</title>
+{% endblock %}
+
 {% if DISQUS_SITENAME %}<p>There are <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread">comments</a>.</p>{% endif %}

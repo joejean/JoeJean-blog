@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %} Tags | {{ SITENAME }}{% endblock %}
+{% block title %}
+	<meta name="title" content="Tags | {{ SITENAME }}">
+	<link rel="canonical" href="{{ SITEURL }}/tags">
+	<title> Tags | {{ SITENAME }}</title>
+{% endblock %}
 
 {% block content %}
 

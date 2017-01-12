@@ -1,2 +1,7 @@
 {% extends "index.html" %}
-{% block title %}{{ SITENAME }} - {{ tag }}{% endblock %}
+{% block title %}
+	<meta name="title" content="{{ SITENAME }} - {{ tag }}">
+	<link rel="canonical" href="{{ SITEURL }}/{{ tag.url }}">
+	<title> {{ SITENAME }} - {{ tag }}</title>
+{% endblock %}
+

@@ -1,5 +1,10 @@
 {% extends "base.html" %}
-{% block title %}{{ page.title }} | {{ SITENAME }} {% endblock %}
+{% block title %}
+	<meta name="title" content="{{ page.title }} | {{ SITENAME }}">
+	<link rel="canonical" href="{{ SITEURL }}/{{page.url}}">
+	<title> {{ page.title }} | {{ SITENAME }}</title>
+{% endblock %}
+
 {% block content %}
 <div class="row">
 	

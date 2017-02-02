@@ -50,7 +50,7 @@
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/joeblog-bootstrap.css"/>
 		<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/font-awesome.min.css"/>
-        <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
 		<link rel="icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/favicon.ico" />
 
         {% if FEED_ALL_ATOM %}
@@ -60,7 +60,8 @@
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
         {% endif %}
 
-		<link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/atelier-forest-dark.min.css">
+		
 
 </head>
 
@@ -161,7 +162,9 @@
 	<!-- JavaScript -->
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery-1.10.2.min.js"></script>
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script>
-	<script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+    <!-- <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script> -->
 	<script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript">
         $('#current_year').text((new Date()).getFullYear());

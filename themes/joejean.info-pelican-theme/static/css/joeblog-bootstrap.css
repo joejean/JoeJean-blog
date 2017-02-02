@@ -2,10 +2,10 @@ body {
     margin-top: 80px;
     /* 100px is double the height of the navbar - I made it a big larger for 
     some more space - keep it at 50px at least if you want to use the fixed top nav */
-    font-family: 'Playfair Display', serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     color: #000000;
-    font-size: 20px;
+    font-size: 15px;
 }
 footer {
     margin: 10px 0;
@@ -22,7 +22,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 .btn-custom {
     background-color: hsl(215, 74%, 36%) !important;
@@ -98,5 +98,15 @@ h6,
     .panel-footer{
         font-size: 14px !important;
     }
+}
+
+code:not(.hljs) {
+    padding: 2px 4px;
+    font-size: 90%;
+    white-space: nowrap;
+    border-radius: 4px;
+    color: #556 !important;
+    background-color: #fff !important;
+    border: 1px solid #ddd;
 }
 

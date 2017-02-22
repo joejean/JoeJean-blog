@@ -10,10 +10,10 @@
  <div class="row">
 		
 		
-        <div class="col-md-8">
+        <div class="col-md-10">
         
           <!-- the actual blog post: title/author/date/content -->
-          <h1>{{ article.title }}</h1>
+          <h1 class="text-justify">{{ article.title }}</h1>
           <p><span class="glyphicon glyphicon-user"></span> by {{article.author}} | <span class="glyphicon glyphicon-time"></span> on {{ article.locale_date }} |
 			<span class="glyphicon glyphicon-tag"></span> under: <span class="badge">{{article.category}}</span> </p>
           <hr>
@@ -47,6 +47,5 @@
 
         </div>
 		
-		{% include 'article_right_sidebar.html' %}
 
 {% endblock %}

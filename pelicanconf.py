@@ -9,7 +9,7 @@ SITENAME = u"Joe Jean"
 
 SITEURL_LIVE = 'https://www.joejean.net'
 
-if os.environ.get('ENV') == 'test':
+if os.environ.get('ENV') == 'dev':
     SITEURL = 'http://localhost:8000'
 else:
     SITEURL = 'https://www.joejean.net'

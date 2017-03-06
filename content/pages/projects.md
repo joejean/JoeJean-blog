@@ -1,6 +1,6 @@
-Title: Portfolio
+Title: Projects
 Date: 2013-12-28 10:20
-Slug: portfolio
+Slug: projects
 Author: Joe Jean
 Summary: My Portfolio
 

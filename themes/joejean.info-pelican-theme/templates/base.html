@@ -121,9 +121,17 @@
 			<div class="row">
 			  <div class="col-md-12">
 			    <hr class="btn-custom">
-				<p> Copyright &copy; Joe Jean 2014-<span id="current_year"></span>. Designed and built by <a href="mailto:joe@joejean.net">Joe Jean</a>.
+                <p class="text-center center-block">
+                    <a href="https://www.facebook.com/joe.jean3"><i class="fa fa-facebook-square fa-2x"></i></a>
+                    <a href="https://ae.linkedin.com/in/joejean/"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                       <a href="https://google.com/+JoeJean"><i class="fa fa-google-plus fa-2x"></i> </a>
+                       <a href="https://github.com/joejean"><i class="fa fa-github fa-2x"></i></a>
+                      <a href="mailto:joe@joejean.info"><i class="fa fa-envelope fa-2x"></i></a>
+                </p>
+				<p class="text-center center-block"> &copy; 2014-<span id="current_year"></span>
+                  
 				{% if SOCIAL or FEED_ALL_ATOM or FEED_ALL_RSS %}
-                <span class="pull-right">
+                <!-- <span class="pull-right">
 
                             {% if FEED_ALL_ATOM %}
                             <i class="fa fa-rss"></i> <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate">Atom feed</a>
@@ -131,7 +139,7 @@
                             {% if FEED_ALL_RSS %}
                             <i class="fa fa-rss"></i> <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate">rss feed</a>
                             {% endif %}
-                </span>
+                </span> -->
 				{% endif %}
 				</p>
 				<br >

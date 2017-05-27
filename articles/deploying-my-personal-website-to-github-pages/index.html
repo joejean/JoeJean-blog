@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="title" content="Moving My Personal Website from Heroku to Github Pages">
+	<link rel="canonical" href="http://www.joejean.net/articles/deploying-my-personal-website-to-github-pages/">
+	<title> Moving My Personal Website from Heroku to Github Pages</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Joe Jean is a passionate Software Engineer. He holds a Bachelor of Science in Computer Science from New York University Abu Dhabi. JoeJean.net is his personal blog where he writes about life, technology and more.">
+		<meta name="author" content="Joe Jean">
+        <link href="/atom.xml" rel="alternate" type="application/rss+xml" title="Joe Jean's Blog" />
+		<meta name="robots" content="all">
+		<meta name="keywords" content="coding, python, computer science, software engineering, web development, computer programming tips, technology">
+        <meta property="og:site_name" content="Joe Jean's Blog" /> 
+
+
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@joeclef509">
+        <meta name="twitter:title" content="Moving My Personal Website from Heroku to Github Pages" >
+        <meta name="twitter:description" content="When I first built my personal website I deployed it to Heroku. At that time Heroku was the best option for me because it offered a fr...">
+        
+        <!-- Open Graph Data -->
+        <meta property="og:title" content="Moving My Personal Website from Heroku to Github Pages" /> 
+        <meta property="og:description" content="When I first built my personal website I deployed it to Heroku. At that time Heroku was the best option for me because it offered a free tier and it was relatively easy to use. But one thing I d..."/>
+        
+
+        <link rel="stylesheet" href="http://www.joejean.net/theme/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="http://www.joejean.net/theme/css/joeblog-bootstrap.css"/>
+		<link rel="stylesheet" href="http://www.joejean.net/theme/css/font-awesome.min.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+		<link rel="icon" href="http://www.joejean.net/theme/images/favicon.ico" />
+
+        <link href="https://www.joejean.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Joe Jean Atom Feed" />
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/atelier-forest-dark.min.css">
+		
+
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand img-responsive" href="http://www.joejean.net"> <img src="http://www.joejean.net/theme/images/joejeanlogo.png" class="img-responsive logo"/></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav pull-right">
+
+			<li ><a href="http://www.joejean.net">Home</a></li>
+
+
+                    <li><a href="http://www.joejean.net/pages/about/">About</a></li>
+                    <li><a href="http://www.joejean.net/pages/projects/">Projects</a></li>
+
+			<li><a href="http://www.joejean.net/files/Joe_Jean_Software_Engineer.pdf" target="_blank"> R&eacute;sum&eacute; </a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+    <div class="container">
+ <div class="row">
+		
+		
+        <div class="col-md-10">
+        
+          <!-- the actual blog post: title/author/date/content -->
+          <h1 class="text-justify">Moving My Personal Website from Heroku to Github Pages</h1>
+          <p><span class="glyphicon glyphicon-user"></span> by Joe Jean | <span class="glyphicon glyphicon-time"></span> on Nov 08, 2015 |
+			<span class="glyphicon glyphicon-tag"></span> under: <span class="badge">Programming</span> </p>
+          <hr>
+          
+          <p>When I first built my personal website I deployed it to Heroku. At that time Heroku was the best option for me because it offered a free tier and it was relatively easy to use. But one thing I did not like about it was that the application dyno&mdash;the container that handles all the HTTP traffic to the site&mdash; would go to sleep if my website receives no traffic in a 30-minute period. Consequently the next time someone tries to access the site it will take longer to load as the dyno will need to wake up first. </p>
+<p>The site is built with <a href="http://docs.getpelican.com/en/3.6.3/">Pelican</a> which is a static site generator written in Python. A static site generator basically takes text written in a plain text markup format such as Markdown and converts it to HTML pages using predefined templates. So, after defining the templates for my website, whenever I need to publish new content such as this article I only need to write raw text in a MarkDown file and Pelican will handle the rest for me. Among other advantages, this approach is easy to use and results in a really fast website that can be easily deployed to GitHub Pages. </p>
+<p>This weekend I decided to move my website from Heroku to GitHub Pages. Here is how I went about it.</p>
+<h2>Deploying the site to GitHub Pages</h2>
+<p>In order to publish a Pelican site to GitHub as a User Page, one needs to push the content of the output direrctory generated by Pelican to the master branch of their <code>&lt;username&gt;.github.io</code> repository on GitHub.</p>
+<p>First, I created a new repository named <a href="https://github.com/joejean/joejean.github.io"><code>joejean.github.io</code></a> on GitHub. Note that this repository name must have the form <code>&lt;github username&gt;.github.io</code>.</p>
+<p>Secondly, I installed the Python package <code>ghp-import</code> and issued the command <code>ghp-import output</code>. This command updates the local gh-pages branch with the content of the output directory (creating the branch if it doesn’t already exist).</p>
+<p>And third, I issued the command <code>git push git@github.com:joejean/joejean.github.io.git gh-pages:master</code> to push the content of the gh-pages branch to the master branch of the github repo where the site will live. After this the site was live and it could be accessed from http://joejean/github.io but I wanted to use my custom domain name "www.joejean.net".</p>
+<h2>Setting up the custom domain</h2>
+<p>I tried many different approaches while setting up the custom domain, but what follows is the only approach that worked for me. 
+I started by creating a <a href="https://github.com/joejean/joejean.github.io/blob/cname/CNAME">CNAME file</a> with the content <code>www.joejean.net</code> and commit it to a different branch&mdash;which can have any name&mdash; in the same <code>joejean.github.io</code> repository. Then I merged that branch with the master branch of the <code>joejean.github.io</code> repository. </p>
+<p>Then I opened the domain administration page at my domain name registrar and I created two A records which points respectivley to the GitHub IPs <code>192.30.252.153</code> and <code>192.30.252.154</code>. After that, the last step was to create a CNAME record for the subdomain <code>www.joejean.net</code> that points to <code>joejean.github.io</code>. The following screenshot summarizes the configurations:
+<img src ="http://www.joejean.net/images/dns.png" class="img-responsive img-rounded" /></p>
+<p>So now my site is being served from GitHub pages and loads with the same lightning speed no matter when it is accessed. It is important to note that GitHub Pages only work for static sites. </p>
+          
+          
+          <!-- the comment box -->
+          <div class="well">
+            
+			
+				<div class="comments">
+
+				  <div id="disqus_thread"></div>
+				  <script type="text/javascript">
+					var disqus_identifier = "articles/deploying-my-personal-website-to-github-pages/";
+					var disqus_url = "http://www.joejean.net/articles/deploying-my-personal-website-to-github-pages/";
+					(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = 'https://joejeanblog.disqus.com/embed.js';
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+					})();
+				  </script>
+				</div>
+            
+          </div>
+          
+          
+
+        </div>
+		
+
+
+
+        <footer>
+			<div class="row">
+			  <div class="col-md-12">
+			    <hr class="btn-custom">
+                <p class="text-center center-block">
+                    <a href="https://www.facebook.com/joe.jean3"><i class="fa fa-facebook-square fa-2x"></i></a>
+                    <a href="https://ae.linkedin.com/in/joejean/"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                       <a href="https://google.com/+JoeJean"><i class="fa fa-google-plus fa-2x"></i> </a>
+                       <a href="https://github.com/joejean"><i class="fa fa-github fa-2x"></i></a>
+                      <a href="mailto:joe@joejean.info"><i class="fa fa-envelope fa-2x"></i></a>
+                </p>
+				<p class="text-center center-block"> &copy; 2014-<span id="current_year"></span>
+                  
+                <!-- <span class="pull-right">
+
+                            <i class="fa fa-rss"></i> <a href="https://www.joejean.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom feed</a>
+                </span> -->
+				</p>
+				<br >
+			  </div>
+			</div>
+		</footer>
+
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-46696882-1', 'joejean.info');
+	  ga('send', 'pageview');
+
+	</script>
+
+  <script type="text/javascript">
+    <!-- /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */ -->
+    var disqus_shortname = 'joejeanblog'; // required: replace example with your forum shortname
+
+    <!-- /* * * DON'T EDIT BELOW THIS LINE * * */ -->
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    
+	</div><!-- /.container -->
+
+
+		<!-- AddThis Smart Layers BEGIN -->
+		<!-- Go to www.addthis.com/dashboard to customize your tools --> 
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58bed897fcf4597c"></script> 
+		<script type="text/javascript">
+		  addthis.layers({
+			'theme' : 'transparent',
+			'share' : {
+			  'position' : 'left',
+			  'numPreferredServices' : 4
+			}
+		  });
+		</script>
+		<!-- AddThis Smart Layers END -->
+
+
+	<!-- JavaScript -->
+    <script src="http://www.joejean.net/theme/js/jquery-1.10.2.min.js"></script>
+    <script src="http://www.joejean.net/theme/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+    <!-- <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script> -->
+	<script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript">
+        $('#current_year').text((new Date()).getFullYear());
+    </script>
+</body>
+</html>

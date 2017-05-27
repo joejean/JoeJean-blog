@@ -1,7 +1,0 @@
-*.pyc
-*.pyo
-output/
-cache/
-.TMP
-*.pid
-
